@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Ilustracija paške janjetine">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d98c6a"/>
+      <stop offset="100%" stop-color="#a04e36"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g3)"/>
+  <g fill="#f4e8df" opacity="0.9">
+    <ellipse cx="400" cy="300" rx="150" ry="80"/>
+  </g>
+  <rect x="392" y="200" width="16" height="120" rx="8" fill="#f4e8df" opacity="0.9"/>
+  <text x="400" y="470" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" fill="#5a2417" font-weight="700">Paška janjetina</text>
+</svg>

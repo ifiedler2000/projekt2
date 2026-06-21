@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okusi Paga — vodič kroz gastro baštinu otoka Paga</title>
+  <meta name="description" content="Vodič kroz tradicionalnu hranu i gastro baštinu otoka Paga: paški sir, paška janjetina, baškotin, skuta, riba i vino sorte žutica. Činjenice, kategorije i kontakt.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Okusi Paga — vodič kroz gastro baštinu otoka Paga">
+  <meta property="og:description" content="Tradicionalna hrana i gastro baština otoka Paga: paški sir, janjetina, baškotin, skuta, riba i vino. Pregledaj proizvode i pošalji upit.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://okusi-paga.netlify.app/">
+  <meta property="og:image" content="https://okusi-paga.netlify.app/assets/images/hero-pag.svg">
+  <meta property="og:locale" content="hr_HR">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    Google Analytics 4 — CONSENT-GATED.
+    GA se NE učitava ovdje. script.js učitava gtag tek nakon što
+    korisnik klikne "Prihvati" u cookie banneru (GDPR).
+    Zamijeniti placeholder ID 'G-XXXXXXXXXX' stvarnim GA4 Measurement ID-em.
+  -->
+</head>
+<body>
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#">Okusi&nbsp;Paga</a>
+      <nav class="site-nav" aria-label="Glavna navigacija">
+        <a href="#proizvodi">Proizvodi</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#izvori">Izvori</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="glavni-sadrzaj">
+    <!-- 1. HERO -->
+    <section class="hero" aria-labelledby="hero-naslov">
+      <div class="hero__media">
+        <img src="assets/images/hero-pag.svg" alt="Stilizirana ilustracija otoka Paga s morem i kamenjarom" width="1600" height="900">
+      </div>
+      <div class="container hero__content">
+        <h1 id="hero-naslov">Tradicionalni okusi otoka Paga na jednom mjestu</h1>
+        <p class="hero__subtitle">Pregled poznatih paških proizvoda i jela — od paškog sira i janjetine do baškotina i vina sorte žutica — s provjerljivim činjenicama o svakom.</p>
+        <a class="btn btn--primary" id="hero-cta" href="#kontakt">Pošalji upit</a>
+      </div>
+    </section>
+
+    <!-- 3 + 4. FILTER, PRETRAGA, KARTICE -->
+    <section class="products" id="proizvodi" aria-labelledby="proizvodi-naslov">
+      <div class="container">
+        <h2 id="proizvodi-naslov">Proizvodi i jela</h2>
+        <p class="section-intro">Filtriraj po kategoriji ili pretraži po nazivu i sastojcima.</p>
+
+        <div class="controls">
+          <div class="filters" role="group" aria-label="Filtriranje po kategoriji">
+            <button type="button" class="filter-btn is-active" data-filter="sve" aria-pressed="true">Sve</button>
+            <button type="button" class="filter-btn" data-filter="sir" aria-pressed="false">Sir i mliječno</button>
+            <button type="button" class="filter-btn" data-filter="meso-riba" aria-pressed="false">Meso i riba</button>
+            <button type="button" class="filter-btn" data-filter="slatko-pice" aria-pressed="false">Slatko i piće</button>
+          </div>
+          <div class="search">
+            <label for="pretraga">Pretraga</label>
+            <input type="search" id="pretraga" placeholder="npr. sir, sol, vino…" autocomplete="off">
+          </div>
+        </div>
+
+        <p class="no-results" id="no-results" hidden>Nema rezultata za zadane uvjete. Pokušaj s drugim pojmom ili kategorijom.</p>
+
+        <ul class="cards" id="cards-grid">
+          <!-- Sir i mliječno -->
+          <li class="card" data-category="sir" data-search="paški sir ovčji tvrdi sir zoi zaštićena oznaka izvornosti sol kadulja ispaša mlijeko">
+            <img class="card__img" src="assets/images/paski-sir.svg" alt="Ilustracija koluta paškog sira" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge">Sir i mliječno</span>
+              <h3 class="card__title">Paški sir</h3>
+              <p class="card__desc">Tvrdi ovčji sir s otoka Paga. Nosi oznaku zaštićene oznake izvornosti (ZOI). Specifičnu aromu povezuje se s ispašom ovaca na kamenjaru izloženom soli i samoniklom bilju poput kadulje.</p>
+              <ul class="card__facts">
+                <li>Vrsta: tvrdi sir od ovčjeg mlijeka</li>
+                <li>Status: zaštićena oznaka izvornosti (ZOI)</li>
+                <li>Karakteristika: utjecaj ispaše i morske soli na okus</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="card" data-category="sir" data-search="paška skuta svježi mliječni proizvod sirutka meki namaz">
+            <img class="card__img" src="assets/images/paska-skuta.svg" alt="Ilustracija posude s paškom skutom" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge">Sir i mliječno</span>
+              <h3 class="card__title">Paška skuta</h3>
+              <p class="card__desc">Svježi mliječni proizvod koji se dobiva od sirutke preostale pri proizvodnji sira. Blagog je okusa i meke teksture te se koristi u slatkim i slanim jelima.</p>
+              <ul class="card__facts">
+                <li>Vrsta: svježi mliječni proizvod od sirutke</li>
+                <li>Tekstura: meka, maziva</li>
+                <li>Upotreba: namazi, kolači, slana jela</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Meso i riba -->
+          <li class="card" data-category="meso-riba" data-search="paška janjetina meso janjad otok zaštićena oznaka ovce ispaša">
+            <img class="card__img" src="assets/images/paska-janjetina.svg" alt="Ilustracija pripremljene paške janjetine" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge">Meso i riba</span>
+              <h3 class="card__title">Paška janjetina</h3>
+              <p class="card__desc">Meso janjadi uzgojene na otoku Pagu. Nosi oznaku zaštite na razini Europske unije. Okus se povezuje s prehranom janjadi na otočnoj ispaši.</p>
+              <ul class="card__facts">
+                <li>Vrsta: meso janjadi s otoka Paga</li>
+                <li>Status: zaštićena oznaka (EU razina)</li>
+                <li>Karakteristika: vezano uz otočnu ispašu</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="card" data-category="meso-riba" data-search="riba plodovi mora lokalna kuhinja adriatik jadran ulov ribarstvo">
+            <img class="card__img" src="assets/images/riba-plodovi-mora.svg" alt="Ilustracija ribe i školjki" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge">Meso i riba</span>
+              <h3 class="card__title">Riba i plodovi mora</h3>
+              <p class="card__desc">Lokalna kuhinja oslanja se na ribu i plodove mora iz okolnih voda. Pripremaju se na jednostavne načine, najčešće s maslinovim uljem i lokalnim začinskim biljem.</p>
+              <ul class="card__facts">
+                <li>Izvor: ulov iz okolnih jadranskih voda</li>
+                <li>Priprema: jednostavna, s maslinovim uljem</li>
+                <li>Dio: svakodnevne i svečane kuhinje</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Slatko i piće -->
+          <li class="card" data-category="slatko-pice" data-search="paški baškotin dvopek benediktinke samostan pag tradicijski keks">
+            <img class="card__img" src="assets/images/baskotin.svg" alt="Ilustracija paškog baškotina" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge">Slatko i piće</span>
+              <h3 class="card__title">Paški baškotin</h3>
+              <p class="card__desc">Tradicijski dvopek čiju pripremu u Pagu njeguju benediktinke. Suho je pecivo dužeg roka trajanja koje se tradicionalno poslužuje uz kavu ili vino.</p>
+              <ul class="card__facts">
+                <li>Vrsta: tradicijski dvopek (suho pecivo)</li>
+                <li>Baština: izrada u benediktinskom samostanu u Pagu</li>
+                <li>Posluživanje: uz kavu ili vino</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="card" data-category="slatko-pice" data-search="žutica gegić autohtona sorta vino bijelo vino otok pag vinogradi kolan">
+            <img class="card__img" src="assets/images/zutica-vino.svg" alt="Ilustracija boce i čaše vina od sorte žutica" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge">Slatko i piće</span>
+              <h3 class="card__title">Žutica (Gegić)</h3>
+              <p class="card__desc">Žutica, poznata i kao gegić, autohtona je sorta grožđa otoka Paga od koje se proizvodi bijelo vino. Vinogradi se nalaze na otočnom kamenjaru izloženom utjecaju mora.</p>
+              <ul class="card__facts">
+                <li>Vrsta: autohtona sorta grožđa (bijelo vino)</li>
+                <li>Naziv: žutica, lokalno gegić</li>
+                <li>Uzgoj: otočni kamenjar uz utjecaj mora</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. KONTAKT FORMA -->
+    <section class="contact" id="kontakt" aria-labelledby="kontakt-naslov">
+      <div class="container contact__inner">
+        <div class="contact__intro">
+          <h2 id="kontakt-naslov">Pošalji upit</h2>
+          <p>Imaš pitanje o paškim proizvodima ili prijedlog za nadopunu vodiča? Pošalji poruku putem obrasca.</p>
+        </div>
+
+        <!--
+          Netlify Forms: forma radi automatski nakon deploya na Netlify.
+          Atributi data-netlify="true" i skriveni "form-name" omogućuju
+          Netlifyju da prepozna i obrađuje slanje. "honeypot" polje hvata botove.
+          HTTPS je automatski osiguran (Netlify izdaje TLS certifikat).
+        -->
+        <form class="form" name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="kontakt">
+          <p class="hp-field" hidden aria-hidden="true">
+            <label>Ne ispunjavaj ovo polje: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="form__row">
+            <label for="ime">Ime <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="ime" name="ime" required autocomplete="name" aria-describedby="ime-err">
+            <span class="error" id="ime-err" role="alert"></span>
+          </div>
+
+          <div class="form__row">
+            <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-err">
+            <span class="error" id="email-err" role="alert"></span>
+          </div>
+
+          <div class="form__row">
+            <label for="poruka">Poruka <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="poruka" name="poruka" rows="5" required aria-describedby="poruka-err"></textarea>
+            <span class="error" id="poruka-err" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Pošalji</button>
+          <p class="form__success" id="form-success" role="status" hidden>Hvala na poruci! Javit ćemo se u najkraćem roku.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 6. IZVORI / CREDITS -->
+    <section class="credits" id="izvori" aria-labelledby="izvori-naslov">
+      <div class="container">
+        <h2 id="izvori-naslov">Izvori i zasluge</h2>
+        <p>Slike na ovoj stranici izvorne su, ilustrativne SVG grafike izrađene za projekt (nisu fotografije stvarnih proizvoda). Činjenice o proizvodima temelje se na izvorima navedenima u dokumentu <code>research-brief.md</code>.</p>
+        <ul class="credits__list">
+          <li><strong>Vizualni materijali:</strong> izvorni SVG placeholderi (autorski rad, ilustrativni prikaz).</li>
+          <li><strong>Sadržajne činjenice:</strong> Wikipedia, Turistička zajednica Grada Paga, Ministarstvo poljoprivrede (registar oznaka ZOI/ZOZP). Pune reference i procjena pouzdanosti nalaze se u <code>research-brief.md</code>.</li>
+          <li><strong>Baština:</strong> Paška čipka uvrštena je na UNESCO-ov reprezentativni popis nematerijalne kulturne baštine čovječanstva (2009.).</li>
+        </ul>
+        <p class="credits__note">Napomena: URL-ove izvora treba ponovno provjeriti prije objave jer se sadržaj na webu mijenja.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026. Okusi Paga — Ivana Fiedler (studentski projekt, Digitalna pismenost).</p>
+      <p>Ilustracije i tekst: autorski rad. Sadržaj se temelji na javno dostupnim izvorima.</p>
+    </div>
+  </footer>
+
+  <!-- 8. COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Obavijest o kolačićima" hidden>
+    <div class="cookie-banner__inner container">
+      <p class="cookie-banner__text">
+        Koristimo kolačiće za anonimnu analitiku (Google Analytics) kako bismo poboljšali stranicu.
+        Analitika se učitava tek nakon tvog pristanka. Možeš prihvatiti ili odbiti.
+      </p>
+      <div class="cookie-banner__actions">
+        <button type="button" class="btn btn--ghost" id="cookie-reject">Odbij</button>
+        <button type="button" class="btn btn--primary" id="cookie-accept">Prihvati</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

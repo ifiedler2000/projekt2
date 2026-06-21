@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Ilustracija paškog baškotina">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e7c69a"/>
+      <stop offset="100%" stop-color="#b07e4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g5)"/>
+  <g fill="#f6e9d4" opacity="0.95">
+    <rect x="300" y="270" width="200" height="70" rx="35"/>
+    <rect x="300" y="200" width="200" height="60" rx="30"/>
+  </g>
+  <text x="400" y="470" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" fill="#5e3c19" font-weight="700">Paški baškotin</text>
+</svg>
