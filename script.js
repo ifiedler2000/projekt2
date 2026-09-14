@@ -11,7 +11,7 @@
 
   /* --- Konfiguracija --------------------------------------------------- */
   // ZAMIJENITI stvarnim GA4 Measurement ID-em prije objave:
-  var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+  var GA_MEASUREMENT_ID = "G-Q2RV03D3SP";
   var CONSENT_KEY = "okusi-paga-cookie-consent"; // vrijednosti: "accepted" | "rejected"
 
   /* ====================================================================
