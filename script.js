@@ -124,17 +124,41 @@
         return;
       }
 
-      // Validno: prikaži poruku uspjeha (statički tekst, bez echo-a korisničkog unosa).
-      if (success) success.hidden = false;
+      // Validno → pošalji podatke Netlify Formsu preko fetch (AJAX),
+      // da se submission STVARNO zabilježi na Netlifyju, a korisnik ostane
+      // na stranici i vidi poruku uspjeha.
+      // VAŽNO: radi SAMO na objavljenoj Netlify stranici; lokalno POST nema
+      // backend pa se izvrši catch() — to je očekivano.
+      event.preventDefault();
 
       // GA4 event (samo ako je korisnik pristao i gtag postoji).
       trackEvent("form_submit", { form_name: "kontakt" });
 
-      // Napomena: na Netlifyju submit se obrađuje serverski (Netlify Forms).
-      // Tijekom lokalnog testiranja sprječavamo navigaciju da se vidi poruka uspjeha.
-      // Na produkciji ukloniti sljedeću liniju ako želite Netlifyjevu success stranicu.
-      event.preventDefault();
-      form.reset();
+      var submitBtn = form.querySelector('[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      // Serijaliziraj sva polja forme (uključuje i skriveni "form-name").
+      var body = new URLSearchParams(new FormData(form)).toString();
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          form.reset();
+          if (success) success.hidden = false;
+        })
+        .catch(function () {
+          if (success) success.hidden = true;
+          window.alert(
+            "Slanje trenutno nije moguće. Napomena: obrazac radi tek na objavljenoj Netlify stranici, ne lokalno."
+          );
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
